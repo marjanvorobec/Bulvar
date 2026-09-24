@@ -6,10 +6,10 @@
     <title>Меню — Ресторан Бульвар</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="menu-body">
 
     <header class="header">
-        <div class="logo">БУЛЬВАР</div>
+        <div class="logo">МАР'ЯН</div>
         <nav class="nav">
             <a href="index.html">Головна</a>
             <a href="menu.html">Меню</a>
@@ -19,10 +19,25 @@
 
     <section class="menu-page">
         <h1>Наше меню</h1>
+        <p class="menu-subtitle">Українська душа, японська витонченість та італійський шарм</p>
 
-        <!-- УКРАЇНСЬКА КУХНЯ -->
-        <h2 class="category">Українська кухня</h2>
-        <div class="dish">
+        <!-- ФІЛЬТР КАТЕГОРІЙ -->
+        <div class="filters">
+            <button class="filter-btn active" data-cat="all">Все</button>
+            <button class="filter-btn" data-cat="ukr">🇺🇦 Українська</button>
+            <button class="filter-btn" data-cat="jap">🇯🇵 Японська</button>
+            <button class="filter-btn" data-cat="ita">🇮🇹 Італійська</button>
+            <button class="filter-btn" data-cat="dessert">🍰 Десерти</button>
+            <button class="filter-btn" data-cat="coffee">☕ Кава</button>
+            <button class="filter-btn" data-cat="alco">🍷 Алкоголь</button>
+            <button class="filter-btn" data-cat="soft">🥤 Напої</button>
+        </div>
+
+        <!-- УКРАЇНСЬКА -->
+        <h2 class="category" data-cat="ukr">🇺🇦 Українська кухня</h2>
+
+        <div class="dish" data-cat="ukr">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1543342381-1e0c2e0c5f1c?w=200" alt="Борщ">
             <div class="dish-info">
                 <h3>Борщ український</h3>
                 <p>Насичений борщ з яловичиною, подається зі сметаною та пампушками</p>
@@ -30,7 +45,8 @@
             <div class="dish-price">145 ₴</div>
         </div>
 
-        <div class="dish">
+        <div class="dish" data-cat="ukr">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=200" alt="Вареники">
             <div class="dish-info">
                 <h3>Вареники з картоплею</h3>
                 <p>Домашні вареники з картоплею та смаженою цибулею, зі шкварками</p>
@@ -38,7 +54,17 @@
             <div class="dish-price">130 ₴</div>
         </div>
 
-        <div class="dish">
+        <div class="dish" data-cat="ukr">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=200" alt="Вареники з вишнею">
+            <div class="dish-info">
+                <h3>Вареники з вишнею</h3>
+                <p>Солодкі вареники з вишнею та сметаною</p>
+            </div>
+            <div class="dish-price">125 ₴</div>
+        </div>
+
+        <div class="dish" data-cat="ukr">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=200" alt="Картопля">
             <div class="dish-info">
                 <h3>Картопля по-селянськи</h3>
                 <p>Запечена картопля з часником, розмарином та сиром</p>
@@ -46,9 +72,56 @@
             <div class="dish-price">95 ₴</div>
         </div>
 
-        <!-- ЯПОНСЬКА КУХНЯ -->
-        <h2 class="category">Японська кухня</h2>
-        <div class="dish">
+        <div class="dish" data-cat="ukr">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=200" alt="Деруни">
+            <div class="dish-info">
+                <h3>Деруни зі сметаною</h3>
+                <p>Хрусткі картопляні деруни, подаються зі сметаною та зеленню</p>
+            </div>
+            <div class="dish-price">110 ₴</div>
+        </div>
+
+        <div class="dish" data-cat="ukr">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=200" alt="Сало">
+            <div class="dish-info">
+                <h3>Сало з часником</h3>
+                <p>Домашнє сало, часник, чорний хліб</p>
+            </div>
+            <div class="dish-price">90 ₴</div>
+        </div>
+
+        <div class="dish" data-cat="ukr">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1547592180-85f173990554?w=200" alt="Бульйон">
+            <div class="dish-info">
+                <h3>Курячий бульйон з локшиною</h3>
+                <p>Домашній бульйон з курятини та локшини</p>
+            </div>
+            <div class="dish-price">95 ₴</div>
+        </div>
+
+        <div class="dish" data-cat="ukr">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1544025162-d76694265947?w=200" alt="Голубці">
+            <div class="dish-info">
+                <h3>Голубці</h3>
+                <p>Капустяні голубці з м'ясом та рисом у томатному соусі</p>
+            </div>
+            <div class="dish-price">140 ₴</div>
+        </div>
+
+        <div class="dish" data-cat="ukr">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1544025162-d76694265947?w=200" alt="Стейк">
+            <div class="dish-info">
+                <h3>Стейк зі свинини</h3>
+                <p>Соковитий стейк на грилі з овочами</p>
+            </div>
+            <div class="dish-price">280 ₴</div>
+        </div>
+
+        <!-- ЯПОНСЬКА -->
+        <h2 class="category" data-cat="jap">🇯🇵 Японська кухня</h2>
+
+        <div class="dish" data-cat="jap">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=200" alt="Сет суші">
             <div class="dish-info">
                 <h3>Сет суші «Токіо»</h3>
                 <p>24 шматочки: філадельфія, каліфорнія, роли з лососем та тунцем</p>
@@ -56,7 +129,8 @@
             <div class="dish-price">520 ₴</div>
         </div>
 
-        <div class="dish">
+        <div class="dish" data-cat="jap">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1553621042-f6e147245754?w=200" alt="Суші з лососем">
             <div class="dish-info">
                 <h3>Суші з лососем</h3>
                 <p>Свіжий лосось на рисі з васабі</p>
@@ -64,9 +138,104 @@
             <div class="dish-price">85 ₴</div>
         </div>
 
+        <div class="dish" data-cat="jap">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1611143669185-af224c5e3252?w=200" alt="Суші з тунцем">
+            <div class="dish-info">
+                <h3>Суші з тунцем</h3>
+                <p>Свіжий тунець на рисі з васабі</p>
+            </div>
+            <div class="dish-price">95 ₴</div>
+        </div>
+
+        <div class="dish" data-cat="jap">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?w=200" alt="Філадельфія">
+            <div class="dish-info">
+                <h3>Філадельфія з лососем</h3>
+                <p>Класичний рол з лососем, сиром філадельфія та огірком</p>
+            </div>
+            <div class="dish-price">185 ₴</div>
+        </div>
+
+        <div class="dish" data-cat="jap">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1615361200141-f45040f367be?w=200" alt="Каліфорнія">
+            <div class="dish-info">
+                <h3>Каліфорнія</h3>
+                <p>Рол з крабовим м'ясом, авокадо та ікрою тобіко</p>
+            </div>
+            <div class="dish-price">175 ₴</div>
+        </div>
+
+        <div class="dish" data-cat="jap">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1547592180-85f173990554?w=200" alt="Місо-суп">
+            <div class="dish-info">
+                <h3>Місо-суп</h3>
+                <p>Традиційний японський суп з тофу та водоростями</p>
+            </div>
+            <div class="dish-price">95 ₴</div>
+        </div>
+
+        <div class="dish" data-cat="jap">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=200" alt="Удон">
+            <div class="dish-info">
+                <h3>Удон з куркою</h3>
+                <p>Пшенична локшина удон з куркою та овочами в соусі теріякі</p>
+            </div>
+            <div class="dish-price">165 ₴</div>
+        </div>
+
+        <div class="dish" data-cat="jap">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=200" alt="Рамен">
+            <div class="dish-info">
+                <h3>Рамен зі свининою</h3>
+                <p>Японський суп з локшиною, свининою та яйцем</p>
+            </div>
+            <div class="dish-price">185 ₴</div>
+        </div>
+
+        <!-- ІТАЛІЙСЬКА -->
+        <h2 class="category" data-cat="ita">🇮🇹 Італійська кухня</h2>
+
+        <div class="dish" data-cat="ita">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=200" alt="Маргарита">
+            <div class="dish-info">
+                <h3>Піца Маргарита</h3>
+                <p>Томатний соус, моцарела, базилік</p>
+            </div>
+            <div class="dish-price">210 ₴</div>
+        </div>
+
+        <div class="dish" data-cat="ita">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=200" alt="Пепероні">
+            <div class="dish-info">
+                <h3>Піца Пепероні</h3>
+                <p>Томатний соус, моцарела, пепероні</p>
+            </div>
+            <div class="dish-price">250 ₴</div>
+        </div>
+
+        <div class="dish" data-cat="ita">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=200" alt="Карбонара">
+            <div class="dish-info">
+                <h3>Паста Карбонара</h3>
+                <p>Спагеті з беконом, яйцем та пармезаном</p>
+            </div>
+            <div class="dish-price">230 ₴</div>
+        </div>
+
+        <div class="dish" data-cat="ita">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=200" alt="Болоньєзе">
+            <div class="dish-info">
+                <h3>Паста Болоньєзе</h3>
+                <p>Спагеті з м'ясним соусом болоньєзе</p>
+            </div>
+            <div class="dish-price">215 ₴</div>
+        </div>
+
         <!-- ДЕСЕРТИ -->
-        <h2 class="category">Десерти</h2>
-        <div class="dish">
+        <h2 class="category" data-cat="dessert">🍰 Десерти</h2>
+
+        <div class="dish" data-cat="dessert">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=200" alt="Медовик">
             <div class="dish-info">
                 <h3>Медовик</h3>
                 <p>Класичний медовий торт з ніжною сметанною начинкою</p>
@@ -74,7 +243,8 @@
             <div class="dish-price">110 ₴</div>
         </div>
 
-        <div class="dish">
+        <div class="dish" data-cat="dessert">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=200" alt="Моті">
             <div class="dish-info">
                 <h3>Моті з матчею</h3>
                 <p>Японський рисовий десерт з матчею та полуницею</p>
@@ -82,18 +252,271 @@
             <div class="dish-price">125 ₴</div>
         </div>
 
-        <div class="dish">
+        <div class="dish" data-cat="dessert">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=200" alt="Чізкейк">
             <div class="dish-info">
                 <h3>Чізкейк Нью-Йорк</h3>
                 <p>Класичний чізкейк з ягідним соусом</p>
             </div>
             <div class="dish-price">135 ₴</div>
         </div>
+
+        <div class="dish" data-cat="dessert">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=200" alt="Тірамісу">
+            <div class="dish-info">
+                <h3>Тірамісу</h3>
+                <p>Італійський десерт з маскарпоне та кавою</p>
+            </div>
+            <div class="dish-price">140 ₴</div>
+        </div>
+
+        <div class="dish" data-cat="dessert">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1607920591413-4ec007e70023?w=200" alt="Наполеон">
+            <div class="dish-info">
+                <h3>Наполеон</h3>
+                <p>Багатошаровий торт з заварним кремом</p>
+            </div>
+            <div class="dish-price">120 ₴</div>
+        </div>
+
+        <!-- КАВА -->
+        <h2 class="category" data-cat="coffee">☕ Кава</h2>
+
+        <div class="dish" data-cat="coffee">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=200" alt="Еспресо">
+            <div class="dish-info">
+                <h3>Еспресо</h3>
+                <p>Міцна італійська кава</p>
+            </div>
+            <div class="dish-price">55 ₴</div>
+        </div>
+
+        <div class="dish" data-cat="coffee">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1551030173-122aabc4489c?w=200" alt="Американо">
+            <div class="dish-info">
+                <h3>Американо</h3>
+                <p>Еспресо з гарячою водою</p>
+            </div>
+            <div class="dish-price">65 ₴</div>
+        </div>
+
+        <div class="dish" data-cat="coffee">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=200" alt="Капучино">
+            <div class="dish-info">
+                <h3>Капучино</h3>
+                <p>Еспресо з молочною піною</p>
+            </div>
+            <div class="dish-price">80 ₴</div>
+        </div>
+
+        <div class="dish" data-cat="coffee">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=200" alt="Лате">
+            <div class="dish-info">
+                <h3>Лате</h3>
+                <p>Ніжна кава з молоком</p>
+            </div>
+            <div class="dish-price">85 ₴</div>
+        </div>
+
+        <div class="dish" data-cat="coffee">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=200" alt="Флет Вайт">
+            <div class="dish-info">
+                <h3>Флет Вайт</h3>
+                <p>Подвійний еспресо з молоком</p>
+            </div>
+            <div class="dish-price">95 ₴</div>
+        </div>
+
+        <div class="dish" data-cat="coffee">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1541167760496-1628856ab772?w=200" alt="Раф">
+            <div class="dish-info">
+                <h3>Раф</h3>
+                <p>Кава з вершками та ванільним цукром</p>
+            </div>
+            <div class="dish-price">95 ₴</div>
+        </div>
+
+        <div class="dish" data-cat="coffee">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=200" alt="Айс Лате">
+            <div class="dish-info">
+                <h3>Айс Лате</h3>
+                <p>Холодна кава з молоком та льодом</p>
+            </div>
+            <div class="dish-price">90 ₴</div>
+        </div>
+
+        <!-- АЛКОГОЛЬ -->
+        <h2 class="category" data-cat="alco">🍷 Алкоголь</h2>
+
+        <div class="dish" data-cat="alco">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=200" alt="Вино червоне">
+            <div class="dish-info">
+                <h3>Вино червоне (келих)</h3>
+                <p>Італійське к'янті</p>
+            </div>
+            <div class="dish-price">120 ₴</div>
+        </div>
+
+        <div class="dish" data-cat="alco">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1547595628-c61a29f496f0?w=200" alt="Вино біле">
+            <div class="dish-info">
+                <h3>Вино біле (келих)</h3>
+                <p>Французьке совіньйон блан</p>
+            </div>
+            <div class="dish-price">120 ₴</div>
+        </div>
+
+        <div class="dish" data-cat="alco">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1535958636474-b021ee887b13?w=200" alt="Пиво">
+            <div class="dish-info">
+                <h3>Пиво крафтове</h3>
+                <p>Місцеве крафтове пиво, 0.5 л</p>
+            </div>
+            <div class="dish-price">90 ₴</div>
+        </div>
+
+        <div class="dish" data-cat="alco">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=200" alt="Віскі">
+            <div class="dish-info">
+                <h3>Віскі</h3>
+                <p>Шотландський віскі, 50 мл</p>
+            </div>
+            <div class="dish-price">180 ₴</div>
+        </div>
+
+        <div class="dish" data-cat="alco">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1608885898957-a559228e8749?w=200" alt="Горілка">
+            <div class="dish-info">
+                <h3>Горілка</h3>
+                <p>Українська горілка, 50 мл</p>
+            </div>
+            <div class="dish-price">70 ₴</div>
+        </div>
+
+        <div class="dish" data-cat="alco">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=200" alt="Коньяк">
+            <div class="dish-info">
+                <h3>Коньяк</h3>
+                <p>Французький коньяк, 50 мл</p>
+            </div>
+            <div class="dish-price">160 ₴</div>
+        </div>
+
+        <div class="dish" data-cat="alco">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1560512823-829485b8bf24?w=200" alt="Апероль">
+            <div class="dish-info">
+                <h3>Коктейль Апероль Шприц</h3>
+                <p>Апероль, просекко, апельсин</p>
+            </div>
+            <div class="dish-price">180 ₴</div>
+        </div>
+
+        <div class="dish" data-cat="alco">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=200" alt="Мохіто">
+            <div class="dish-info">
+                <h3>Коктейль Мохіто</h3>
+                <p>Ром, м'ята, лайм, цукровий сироп, содова</p>
+            </div>
+            <div class="dish-price">170 ₴</div>
+        </div>
+
+        <!-- БЕЗАЛКОГОЛЬНІ -->
+        <h2 class="category" data-cat="soft">🥤 Безалкогольні напої</h2>
+
+        <div class="dish" data-cat="soft">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=200" alt="Узвар">
+            <div class="dish-info">
+                <h3>Узвар</h3>
+                <p>Домашній узвар з сухофруктів</p>
+            </div>
+            <div class="dish-price">60 ₴</div>
+        </div>
+
+        <div class="dish" data-cat="soft">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1546171753-97d7676e4602?w=200" alt="Компот">
+            <div class="dish-info">
+                <h3>Компот з вишні</h3>
+                <p>Домашній компот</p>
+            </div>
+            <div class="dish-price">55 ₴</div>
+        </div>
+
+        <div class="dish" data-cat="soft">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1621263764928-df1444c5e859?w=200" alt="Лимонад">
+            <div class="dish-info">
+                <h3>Лимонад</h3>
+                <p>Домашній лимонад з м'ятою</p>
+            </div>
+            <div class="dish-price">75 ₴</div>
+        </div>
+
+        <div class="dish" data-cat="soft">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=200" alt="Сік">
+            <div class="dish-info">
+                <h3>Сік свіжовичавлений</h3>
+                <p>Апельсин / яблуко / морква</p>
+            </div>
+            <div class="dish-price">90 ₴</div>
+        </div>
+
+        <div class="dish" data-cat="soft">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1597318181409-cf64d0b5d8a2?w=200" alt="Чай">
+            <div class="dish-info">
+                <h3>Чай зелений / чорний</h3>
+                <p>Чайник, 500 мл</p>
+            </div>
+            <div class="dish-price">70 ₴</div>
+        </div>
+
+        <div class="dish" data-cat="soft">
+            <img class="dish-img" src="https://images.unsplash.com/photo-1515823064-d6e0c04616a7?w=200" alt="Матча лате">
+            <div class="dish-info">
+                <h3>Матча лате</h3>
+                <p>Японський зелений чай з молоком</p>
+            </div>
+            <div class="dish-price">110 ₴</div>
+        </div>
+
     </section>
 
     <footer class="footer">
         <p>© 2026 Ресторан «Бульвар». Всі права захищені.</p>
     </footer>
+
+    <!-- JAVASCRIPT ДЛЯ ФІЛЬТРА -->
+    <script>
+        const buttons = document.querySelectorAll('.filter-btn');
+        const dishes = document.querySelectorAll('.dish');
+        const categories = document.querySelectorAll('.category');
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // прибираємо активну зі всіх кнопок
+                buttons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const cat = btn.dataset.cat;
+
+                // показуємо/ховаємо страви
+                dishes.forEach(dish => {
+                    if (cat === 'all' || dish.dataset.cat === cat) {
+                        dish.style.display = 'flex';
+                    } else {
+                        dish.style.display = 'none';
+                    }
+                });
+
+                // показуємо/ховаємо заголовки категорій
+                categories.forEach(h => {
+                    if (cat === 'all' || h.dataset.cat === cat) {
+                        h.style.display = 'block';
+                    } else {
+                        h.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
