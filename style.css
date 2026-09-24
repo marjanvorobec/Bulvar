@@ -1,0 +1,200 @@
+﻿/* ==== ЗАГАЛЬНІ СТИЛІ ==== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    color: #2b2b2b;
+    background: #faf7f2;
+    line-height: 1.6;
+}
+
+/* ==== ШАПКА ==== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: #1a3a2e;   /* темно-зелений */
+    color: #e8d8b0;         /* золотистий */
+}
+
+.logo {
+    font-size: 28px;
+    letter-spacing: 6px;
+    font-weight: bold;
+}
+
+.nav a {
+    color: #e8d8b0;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #ffffff;
+}
+
+/* ==== ГОЛОВНИЙ БАНЕР ==== */
+.hero {
+    background: linear-gradient(rgba(26, 58, 46, 0.85), rgba(26, 58, 46, 0.85)),
+                url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600') center/cover;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero h1 {
+    font-size: 56px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: #e8d8b0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background: #c9a227;    /* золотий */
+    color: #1a3a2e;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #e8d8b0;
+}
+
+/* ==== ПРО НАС ==== */
+.about {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 0 40px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 36px;
+    color: #1a3a2e;
+    margin-bottom: 30px;
+}
+
+.about p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* ==== КОНТАКТИ ==== */
+.contacts {
+    background: #1a3a2e;
+    color: #e8d8b0;
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.contacts h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.contacts p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* ==== СТОРІНКА МЕНЮ ==== */
+.menu-page {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 40px;
+}
+
+.menu-page h1 {
+    text-align: center;
+    font-size: 42px;
+    color: #1a3a2e;
+    margin-bottom: 50px;
+}
+
+.category {
+    font-size: 26px;
+    color: #c9a227;
+    border-bottom: 2px solid #c9a227;
+    padding-bottom: 10px;
+    margin: 40px 0 25px;
+}
+
+.dish {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 0;
+    border-bottom: 1px dashed #d4c9a8;
+}
+
+.dish-info h3 {
+    font-size: 20px;
+    color: #1a3a2e;
+    margin-bottom: 5px;
+}
+
+.dish-info p {
+    font-size: 15px;
+    color: #777;
+    max-width: 600px;
+}
+
+.dish-price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #c9a227;
+    white-space: nowrap;
+    margin-left: 30px;
+}
+
+/* ==== ПІДВАЛ ==== */
+.footer {
+    background: #0f241c;
+    color: #8a8a8a;
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+}
+
+/* ==== МОБІЛЬНА ВЕРСІЯ (для телефона) ==== */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+    .nav a {
+        margin: 10px 10px 0;
+        display: inline-block;
+    }
+    .hero h1 {
+        font-size: 36px;
+    }
+    .hero {
+        padding: 80px 20px;
+    }
+    .dish {
+        flex-direction: column;
+    }
+    .dish-price {
+        margin: 10px 0 0;
+    }
+    .menu-page {
+        padding: 0 20px;
+    }
+}
